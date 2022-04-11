@@ -123,8 +123,6 @@ public class NokiaKeypad {
             if (i == digits.length() - 1 || digits.charAt(i + 1) != digits.charAt(i)) {
                 Integer theNumber = tempList.get(0);
                 ArrayList<String> buttonNumbers = keyboardList.get(theNumber - 1);
-                System.out.println(buttonNumbers);
-                ;
                 String theLetter = (tempList.size() > buttonNumbers.size())
                         ? buttonNumbers.get((tempList.size() % buttonNumbers.size()) - 1)
                         : buttonNumbers.get(tempList.size() - 1);
