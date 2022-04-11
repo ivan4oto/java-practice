@@ -1,4 +1,5 @@
-package com.NokiaKeypad;
+package nokiakeypad;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,13 +12,13 @@ public class NokiaKeypad {
         String digits = myObj.nextLine();
         myObj.close();
 
-        ArrayList<String> buttonOne = new ArrayList<String>() {
+        final ArrayList<String> buttonOne = new ArrayList<String>() {
             {
                 add("!");
             }
         };
 
-        ArrayList<String> buttonTwo = new ArrayList<String>() {
+        final ArrayList<String> buttonTwo = new ArrayList<String>() {
             {
                 add("a");
                 add("b");
@@ -25,7 +26,7 @@ public class NokiaKeypad {
             }
         };
 
-        ArrayList<String> buttonThree = new ArrayList<String>() {
+        final ArrayList<String> buttonThree = new ArrayList<String>() {
             {
                 add("d");
                 add("e");
@@ -33,7 +34,7 @@ public class NokiaKeypad {
             }
         };
 
-        ArrayList<String> buttonFour = new ArrayList<String>() {
+        final ArrayList<String> buttonFour = new ArrayList<String>() {
             {
                 add("g");
                 add("h");
@@ -41,7 +42,7 @@ public class NokiaKeypad {
             }
         };
 
-        ArrayList<String> buttonFive = new ArrayList<String>() {
+        final ArrayList<String> buttonFive = new ArrayList<String>() {
             {
                 add("j");
                 add("k");
@@ -49,14 +50,14 @@ public class NokiaKeypad {
             }
         };
 
-        ArrayList<String> buttonSix = new ArrayList<String>() {
+        final ArrayList<String> buttonSix = new ArrayList<String>() {
             {
                 add("m");
                 add("n");
                 add("o");
             }
         };
-        ArrayList<String> buttonSeven = new ArrayList<String>() {
+        final ArrayList<String> buttonSeven = new ArrayList<String>() {
             {
                 add("p");
                 add("q");
@@ -64,14 +65,14 @@ public class NokiaKeypad {
                 add("s");
             }
         };
-        ArrayList<String> buttonEight = new ArrayList<String>() {
+        final ArrayList<String> buttonEight = new ArrayList<String>() {
             {
                 add("t");
                 add("u");
                 add("v");
             }
         };
-        ArrayList<String> buttonNine = new ArrayList<String>() {
+        final ArrayList<String> buttonNine = new ArrayList<String>() {
             {
                 add("w");
                 add("x");
@@ -79,7 +80,7 @@ public class NokiaKeypad {
                 add("z");
             }
         };
-        ArrayList<String> buttonZero = new ArrayList<String>() {
+        final ArrayList<String> buttonZero = new ArrayList<String>() {
             {
                 add(" ");
             }
@@ -110,8 +111,7 @@ public class NokiaKeypad {
             if (intString == 0) {
                 message.add(" ");
                 continue;
-            }
-            ;
+            };
 
             if (intString == 1) {
                 isCapital = true;
@@ -128,7 +128,6 @@ public class NokiaKeypad {
                 String theLetter = (tempList.size() > buttonNumbers.size())
                         ? buttonNumbers.get((tempList.size() % buttonNumbers.size()) - 1)
                         : buttonNumbers.get(tempList.size() - 1);
-                System.out.println(theLetter);
                 ;
                 if (isCapital) {
                     message.add(theLetter.toUpperCase());
